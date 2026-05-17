@@ -82,7 +82,7 @@ export default function VideoEditor() {
               <FileUpload onFileSelect={handleFileSelect} currentFile={file} />
 
               {!file && (
-              <div className="text-center text-gray-500 py-6">
+              <div className="text-center text-[var(--muted)] py-6">
                 <p>Upload a video to get started</p>
                 <p className="text-sm">Supports MP4, MOV, WebM and more</p>
               </div>
@@ -96,7 +96,7 @@ export default function VideoEditor() {
             </div>
 
             {file && file.size > 100 * 1024 * 1024 && (
-              <p className="text-yellow-400 text-sm">
+            <p className="text-[var(--film-400)] text-sm">
                 ⚠️ Large file — processing may take several minutes
               </p>
             )}      
@@ -248,7 +248,7 @@ export default function VideoEditor() {
                 {!error.includes("Validation Failed") && (
                   <button
                     onClick={handleExport}
-                    className="px-3 py-1.5 bg-red-200 border border-film-200 rounded-lg text-xs font-semibold hover:bg-film-50 hover:border-film-300 transition-colors shrink-0 whitespace-nowrap"
+             className="px-3 py-1.5 bg-[var(--film-600)] border border-[var(--border)] rounded-lg text-xs font-semibold hover:opacity-80 transition-colors shrink-0 whitespace-nowrap"
                   >
                     Retry Export
                   </button>
